@@ -1,0 +1,23 @@
+{
+  "name": "Unit-Testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sodeeqOlapade/Unit-Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sodeeqOlapade/Unit-Testing/issues"
+  },
+  "homepage": "https://github.com/sodeeqOlapade/Unit-Testing#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
