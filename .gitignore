@@ -3,5 +3,9 @@
 .DS_Store
 
 # Dependency directories
-node_modules/
-jspm_packages/
+/node_modules
+/jspm_packages
+
+
+#code runner
+tempCodeRunnerFile.js

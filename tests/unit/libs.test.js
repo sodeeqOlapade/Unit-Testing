@@ -14,7 +14,26 @@ describe("sum", () => {
 
   it("throws error if a or b is NaN", () => {
     expect(() => {
-      lib.sum(Nan, "b");
+      lib.sum(NaN, "b");
+    }).toThrow();
+  });
+});
+
+describe("indefiniteSum", () => {
+  it("throws an error if no argument is provided", () => {
+    expect(() => {
+      lib.indefiniteSum();
+    }).toThrow();
+  });
+
+  it("it should add any amount of number given to it", () => {
+    const result = lib.indefiniteSum(1, 2, 3, 1, 1, 1, 1);
+    expect(result).toBe(10);
+  });
+
+  it("it should throw an error if any of the argument is not a number", () => {
+    expect(() => {
+      lib.indefiniteSum(1, 2, 3, NaN, 5);
     }).toThrow();
   });
 });
