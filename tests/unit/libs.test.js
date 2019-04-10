@@ -33,7 +33,7 @@ describe("indefiniteSum", () => {
 
   it("it should throw an error if any of the argument is not a number", () => {
     expect(() => {
-      lib.indefiniteSum(1, 2, 3, NaN, 5);
+      lib.indefiniteSum(1, 2, 3, ' ', 5);
     }).toThrow();
   });
 });
@@ -84,3 +84,18 @@ describe("division", () => {
       }).toThrow();
     });
   });
+
+describe("concat", () => {
+    it("throws error if parameter list is less than or greater than 2", () =>{
+        expect(() => {lib.concat()}).toThrow();
+    });
+
+    it('throws error if type of any parameter is not a string', () =>{
+        expect(() => {lib.concat({}, h)}).toThrow();
+    });
+
+    it('returns a concatenated string from both inputs', () =>{
+        const result = lib.concat('a', 'boy');
+        expect(result).toMatch(/boy/);
+    });
+});

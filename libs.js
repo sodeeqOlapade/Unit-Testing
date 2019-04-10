@@ -68,3 +68,14 @@ module.exports.division = function(a, b) {
 
   return a / b;
 };
+
+module.exports.concat = function(a, b) {
+  if (arguments.length !== 2) {
+    throw new Error("You are expected to enter two parameters");
+  }
+if(typeof a !== "string" || typeof b !== "string"){
+    throw new Error("all paraneters must be string");
+}
+
+  return a + b;
+};
