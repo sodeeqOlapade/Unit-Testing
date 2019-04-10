@@ -1,3 +1,5 @@
+const gitHub = require('./github');
+
 module.exports.sum = function(a, b) {
   if (arguments.length === 0) {
     throw new Error("Parameters cannot be empty");
@@ -79,3 +81,7 @@ if(typeof a !== "string" || typeof b !== "string"){
 
   return a + b;
 };
+
+module.exports.getUserRepo = function(username){
+    return gitHub.getArrayOfUserRepo(username);
+}
