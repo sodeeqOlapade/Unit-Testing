@@ -12,3 +12,10 @@ tempCodeRunnerFile.js
 
 #test coverage folder
 /coverage
+
+#vs code
+/.vscode
+
+#package-lock.json
+
+package-lock.json

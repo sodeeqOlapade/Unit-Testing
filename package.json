@@ -19,5 +19,8 @@
   "homepage": "https://github.com/sodeeqOlapade/Unit-Testing#readme",
   "devDependencies": {
     "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
   }
 }

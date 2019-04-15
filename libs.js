@@ -1,4 +1,4 @@
-const gitHub = require('./github');
+const gitHub = require("./github");
 
 module.exports.sum = function(a, b) {
   if (arguments.length === 0) {
@@ -75,13 +75,12 @@ module.exports.concat = function(a, b) {
   if (arguments.length !== 2) {
     throw new Error("You are expected to enter two parameters");
   }
-if(typeof a !== "string" || typeof b !== "string"){
-    throw new Error("all paraneters must be string");
-}
-
+  if(typeof a !== 'string' || typeof b !== 'string'){
+      throw new Error("All entries must be a string")
+  }
   return a + b;
 };
 
-module.exports.getUserRepo = function(username){
-    return gitHub.getArrayOfUserRepo(username);
-}
+module.exports.getUserRepo = function(username) {
+  return gitHub.getArrayOfUserRepo(username);
+};

@@ -97,13 +97,13 @@ describe("concat", () => {
 
   it("throws error if type of any parameter is not a string", () => {
     expect(() => {
-      lib.concat({}, h);
+      lib.concat(NaN, undefined);
     }).toThrow();
   });
 
   it("returns a concatenated string from both inputs", () => {
     const result = lib.concat("a", "boy");
-    expect(result).toMatch(/boy/);
+    expect(result).toMatch(/aboy/);
   });
 });
 
@@ -111,16 +111,16 @@ describe("getUserRepo", () => {
   it("it fakes fetching user repos from github", () => {
     const user = { user_email: "a@gmail.com", username: "geek1" };
 
-    gitHub.getArrayOfUserRepo = function(user) {
-      console.log("Fake reading Github repository");
-      return ["readme-cv", "Jest", "React"];
-    };
+    // gitHub.getArrayOfUserRepo = function(user) {
+    //   console.log("Fake reading Github repository");
+    //   return ["readme-cv", "Jest", "React"];
+    // };
 
-    // gitHub.getArrayOfUserRepo = jest
-    //   .fn()
-    //   .mockReturnValue(["readme-cv", "Jest", "React"]);
+    gitHub.getArrayOfUserRepo = jest
+      .fn()
+      .mockReturnValue(["readme-cv", "Jest", "React"]);
 
     const result = lib.getUserRepo(user.username);
-    expect(result).toContain("React");
+    expect(result).toContain("Jest");
   });
 });
